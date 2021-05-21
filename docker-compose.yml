@@ -1,0 +1,10 @@
+version: "3"
+services:
+  mock-runner:
+    container_name: mock-runner
+    image: rodolpheche/wiremock
+    volumes:
+      - ./src:/home/wiremock
+      - ./extn:/var/wiremock/extensions
+    ports:
+      - 10001:8080

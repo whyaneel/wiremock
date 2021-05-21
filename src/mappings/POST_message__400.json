@@ -1,0 +1,27 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPath": "/post",
+    "bodyPatterns": [
+      {
+        "equalToJson": {
+          "myParam" : "400"
+        }
+      }
+    ],
+    "headers": {
+      "Content-Type": {
+        "equalTo": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 400,
+    "jsonBody": {
+      "message": "Something is bad"
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

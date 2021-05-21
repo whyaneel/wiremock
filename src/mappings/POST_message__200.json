@@ -1,0 +1,27 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPath": "/post",
+    "bodyPatterns": [
+      {
+        "equalToJson": {
+          "myParam" : "200"
+        }
+      }
+    ],
+    "headers": {
+      "Content-Type": {
+        "equalTo": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "message": "Name is Posted"
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
