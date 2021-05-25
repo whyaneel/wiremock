@@ -1,0 +1,18 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/rt/welcome",
+    "queryParameters": {
+      "name": {
+        "matches": ".*"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "rt/GET_welcome_{{request.query.name}}_200.json",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

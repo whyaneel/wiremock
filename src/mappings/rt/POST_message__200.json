@@ -1,0 +1,25 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPath": "/rt/post",
+    "bodyPatterns": [
+      {
+        "equalToJson": {
+          "myParam" : "200"
+        }
+      }
+    ],
+    "headers": {
+      "Content-Type": {
+        "equalTo": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "rt/POST_message_{{jsonPath request.body '$.myParam'}}_response.json",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

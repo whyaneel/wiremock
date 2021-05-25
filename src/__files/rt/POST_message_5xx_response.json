@@ -1,0 +1,3 @@
+{
+  "message": "Server Error {{jsonPath request.body '$.myParam'}}"
+}

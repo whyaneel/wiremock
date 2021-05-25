@@ -8,3 +8,6 @@ services:
       - ./extn:/var/wiremock/extensions
     ports:
       - 10001:8080
+    command:
+      - -global-response-templating
+      - -verbose

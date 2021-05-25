@@ -23,18 +23,32 @@ ba4376c7d98b   rodolpheche/wiremock   "/docker-entrypoint.…"   15 seconds ago 
 ```
 
 ### 3. Test & Debug
+
+#### Boilerplate
 ```
 curl -X GET http://localhost:10001/ok
 ```
 
-#### It shows below Output
+##### It shows below Output
 ```
 {
   "message": "Wiremock is UP & Running"
 }
 ```
 
-#### Debug with logs
+#### Response Templating
+```
+curl -X GET http://localhost:10001/rt/ok
+```
+
+##### It shows below Output (date is dynamic)
+```
+{
+    "message": "Wiremock is UP & Running 2021-05-25T14:13:34Z"
+}
+```
+
+#### Debug with logs (Verbose enabled, see docker-compose.yml)
 ```
 docker-compose logs -f
 

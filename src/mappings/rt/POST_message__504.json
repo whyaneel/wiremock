@@ -1,0 +1,26 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPath": "/rt/post",
+    "bodyPatterns": [
+      {
+        "equalToJson": {
+          "myParam" : "504"
+        }
+      }
+    ],
+    "headers": {
+      "Content-Type": {
+        "equalTo": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 504,
+    "fixedDelayMilliseconds": "2000",
+    "bodyFileName": "rt/POST_message_5xx_response.json",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

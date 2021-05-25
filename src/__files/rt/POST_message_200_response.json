@@ -1,0 +1,3 @@
+{
+  "message": "Good {{jsonPath request.body '$.myParam'}}, Date: {{now format='yyyy-MM-dd'}}"
+}
