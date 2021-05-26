@@ -1,0 +1,17 @@
+version: "3"
+services:
+  mock-runner:
+    container_name: mock-runner
+    image: rodolpheche/wiremock
+    networks:
+      - mockrunner_bridge
+    volumes:
+      - ./src:/home/wiremock
+      - ./extn:/var/wiremock/extensions
+    ports:
+      - 10001:8080
+
+networks:
+  mockrunner_bridge:
+    name: mockrunner_bridge
+    driver: bridge

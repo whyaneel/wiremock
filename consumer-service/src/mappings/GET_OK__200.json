@@ -1,0 +1,10 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/ok"
+  },
+  "response": {
+    "proxyBaseUrl": "http://mock-runner:8080"
+  }
+}
+
